@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test.MainPage">
+
+    <ScrollView  
+        Margin="-25,0,-25,-40" 
+        VerticalScrollBarVisibility="Never">
+        
+        <Grid 
+            RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" 
+            RowSpacing="15" Margin="30,0,30,30" 
+            ColumnDefinitions="*,*,*">
+            
+            <!-- Rounded Main Picture -->
+            <Frame 
+                Grid.Column="0" 
+                Grid.Row="0" 
+                Grid.ColumnSpan="3" 
+                Margin="0,0,0,-30" 
+                CornerRadius="40" 
+                IsClippedToBounds="True" 
+                Padding="0">
+                
+                <Image 
+                    Aspect="AspectFill" 
+                    Source="model.jpeg" 
+                    HorizontalOptions="FillAndExpand" 
+                    HeightRequest="410"/>
+            </Frame>
+            
+            <!-- Floating Buttons -->
+            <!-- Delete Button --><!--
+            <Button Grid.Column="0" Grid.Row="1" Margin="0,-50,0,0" HeightRequest="80" WidthRequest="80" CornerRadius="40" ImageSource="heart" BackgroundColor="White">
+                <Button.Shadow>
+                    <Shadow Brush="#bcbcbc"
+                       Offset="5,5"
+                       Opacity="0.6"/>
+                </Button.Shadow>
+            </Button>
+            
+            --><!-- Like Button--><!--
+            <Button Grid.Column="1" Grid.Row="1" Margin="0,-50,0,0" HeightRequest="110" WidthRequest="110" CornerRadius="55" ImageSource="heart.png" BackgroundColor="#f858a4">
+                <Button.Shadow>
+                    <Shadow Brush="#f8bcd9"
+                        Offset="5,5"
+                        Opacity="0.6"/>
+                </Button.Shadow>
+            </Button>
+            
+            --><!-- Rate Button --><!--
+            <Button Grid.Column="2" Grid.Row="1" Margin="0,-50,0,0" HeightRequest="80" WidthRequest="80" CornerRadius="40" ImageSource="star" BackgroundColor="White">
+                <Button.Shadow>
+                    <Shadow Brush="#bcbcbc"
+                        Offset="5,5"
+                        Opacity="0.6"/>
+                </Button.Shadow>
+            </Button>-->
+
+            <!-- Name and Age -->
+            <Label 
+                Grid.Column="0" 
+                Grid.ColumnSpan="3" 
+                Grid.Row="1" 
+                Text="Joshua Agrabio, 27" 
+                Margin="15,-100,0,0" 
+                FontSize="32" 
+                TextColor="White" 
+                FontFamily="sfuitextmedium"
+                HorizontalOptions="StartAndExpand">
+
+                <Label.Shadow>
+                    <Shadow 
+                        Radius="3" 
+                        Offset="1,1"/>
+                </Label.Shadow>
+
+            </Label>
+
+            
+            <!--About Me-->
+            <Label 
+                Grid.Column="0" 
+                Grid.ColumnSpan="3" 
+                Grid.Row="1" 
+                Text="I am ethereal don't settle for less queen" 
+                Margin="15,-51,0,0" 
+                FontSize="14" 
+                TextColor="White" 
+                FontFamily="sfuitextregular"
+                HorizontalOptions="StartAndExpand">
+
+                <Label.Shadow>
+                    <Shadow 
+                        Radius="3" 
+                        Offset="1,1"/>
+                </Label.Shadow>
+
+            </Label>
+
+
+            <!-- Followers -->
+            <StackLayout 
+                Grid.Row="4" 
+                Grid.Column="0" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                
+                <Label 
+                    Text="1.5k" 
+                    FontSize="26" 
+                    TextColor="Black" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontFamily="sfuitextmedium"/>
+                <Label 
+                    Text="Followers" 
+                    FontSize="20" 
+                    TextColor="Gray" 
+                    HorizontalOptions="Center"
+                    FontFamily="sfuitextregular"/>
+            </StackLayout>
+
+            <!-- Following -->
+            <StackLayout 
+                Grid.Row="4" 
+                Grid.Column="1" 
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                
+                <Label 
+                    Text="500" 
+                    FontSize="26" 
+                    TextColor="Black" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontFamily="sfuitextmedium"/>
+                <Label 
+                    Text="Following" 
+                    FontSize="20" 
+                    TextColor="Gray" 
+                    HorizontalOptions="Center"
+                    FontFamily="sfuitextregular"/>
+            </StackLayout>
+            
+            <!-- Post Count -->
+            <StackLayout 
+                Grid.Row="4" 
+                Grid.Column="2" 
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand">
+                
+                <Label 
+                    Text="19"
+                    FontSize="26" 
+                    TextColor="Black" 
+                    HorizontalOptions="CenterAndExpand"
+                    FontFamily="sfuitextmedium"/>
+                <Label 
+                    Text="Posts"
+                    FontSize="20" 
+                    TextColor="Gray" 
+                    HorizontalOptions="Center"
+                    FontFamily="sfuitextregular"/>
+            </StackLayout>
+
+
+            <!-- BUTTONS -->
+            <!-- Follow Button -->
+            <StackLayout
+                Grid.Row="6"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Margin="0,10,20,0">
+
+                <StackLayout Orientation="Horizontal">
+                    <!--<Image 
+                        Source="follow.png" 
+                        WidthRequest="24" 
+                        HeightRequest="24" />-->
+                    <Button 
+                        Text="Follow" 
+                        TextColor="MediumPurple"
+                        FontSize="20"
+                        FontFamily="sfuitextregular"
+                        HorizontalOptions="Center"
+                        BorderWidth="2"
+                        BorderColor="MediumPurple"
+                        BackgroundColor="Transparent"
+                        HeightRequest="40"
+                        WidthRequest="120"
+                        Padding="0,3,0,5"/>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Message Button -->
+            <StackLayout
+                Grid.Row="6"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="20,10,0,0">
+
+                <StackLayout Orientation="Horizontal">
+                    <!--<Image 
+                        Source="message.png" 
+                        WidthRequest="24" 
+                        HeightRequest="24" />-->
+                    <Button 
+                        Text="Message" 
+                        TextColor="MediumPurple"
+                        FontSize="20"
+                        FontFamily="sfuitextregular"
+                        HorizontalOptions="Center"
+                        BorderWidth="2"
+                        BorderColor="MediumPurple"
+                        BackgroundColor="Transparent"
+                        HeightRequest="40"
+                        WidthRequest="120"
+                        Padding="0,3,0,5"/>
+                </StackLayout>
+            </StackLayout>
+
+
+            <!-- About Button -->
+            <StackLayout
+                Grid.Row="8"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Margin="0,10,20,0">
+
+                <StackLayout Orientation="Horizontal">
+                    <Button
+                        Text="About" 
+                        TextColor="MediumPurple"
+                        FontSize="20"
+                        FontFamily="sfuitextregular"
+                        HorizontalOptions="Center"
+                        BorderWidth="2"
+                        BorderColor="MediumPurple"
+                        BackgroundColor="Transparent"
+                        HeightRequest="40"
+                        WidthRequest="120"
+                        Padding="0,3,0,5"/>
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Photos Button -->
+            <StackLayout
+                Grid.Row="8"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="20,10,0,0">
+
+                <StackLayout Orientation="Horizontal">
+                    <Button 
+                        Text="Photos" 
+                        TextColor="MediumPurple"
+                        FontSize="20"
+                        FontFamily="sfuitextregular"
+                        HorizontalOptions="Center"
+                        BorderWidth="2"
+                        BorderColor="MediumPurple"
+                        BackgroundColor="Transparent"
+                        HeightRequest="40"
+                        WidthRequest="120"
+                        Padding="0,3,0,5"/>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
